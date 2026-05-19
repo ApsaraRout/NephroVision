@@ -1,0 +1,501 @@
+Serum Creatinine (mg/dL),Age (years),Sex at birth,Race (optional),eGFR,eGFR Stage (KDIGO)
+1.08,63,Male,Black / African American,77.4,G2 Mildly decreased
+0.72,52,Male,Non-Black,109.9,G1 Normal or high
+1.24,66,Female,Black / African American,47.9,G3a Mild–moderate
+2.47,82,Male,Non-Black,25.4,G4 Severe
+1.23,50,Male,Non-Black,71.7,G2 Mildly decreased
+1.33,50,Female,Black / African American,48.7,G3a Mild–moderate
+1.05,83,Female,Non-Black,52.7,G3a Mild–moderate
+1.11,68,Female,Black / African American,54.4,G3a Mild–moderate
+1.34,46,Female,Black / African American,49.4,G3a Mild–moderate
+0.9,64,Female,Non-Black,71.0,G2 Mildly decreased
+0.98,46,Female,Non-Black,72.0,G2 Mildly decreased
+0.99,46,Female,Non-Black,70.8,G2 Mildly decreased
+0.81,59,Female,Non-Black,83.6,G2 Mildly decreased
+1.65,20,Male,Black / African American,60.5,G2 Mildly decreased
+0.81,23,Female,Non-Black,104.1,G1 Normal or high
+0.75,44,Female,Non-Black,99.8,G1 Normal or high
+1.02,36,Female,Non-Black,73.5,G2 Mildly decreased
+1.01,60,Male,Non-Black,85.5,G2 Mildly decreased
+1.05,38,Female,Black / African American,69.6,G2 Mildly decreased
+0.87,29,Female,Non-Black,93.1,G1 Normal or high
+1.93,81,Male,Black / African American,34.3,G3b Moderate–severe
+1.38,50,Male,Non-Black,62.0,G2 Mildly decreased
+1.39,56,Male,Black / African American,59.5,G3a Mild–moderate
+1.06,29,Female,Non-Black,72.6,G2 Mildly decreased
+1.3,45,Female,Non-Black,51.9,G3a Mild–moderate
+1.61,56,Male,Black / African American,50.0,G3a Mild–moderate
+1.19,34,Male,Non-Black,82.6,G2 Mildly decreased
+1.02,61,Male,Black / African American,83.8,G2 Mildly decreased
+0.93,44,Male,Non-Black,104.0,G1 Normal or high
+0.86,49,Female,Non-Black,82.9,G2 Mildly decreased
+1.04,44,Male,Non-Black,90.7,G1 Normal or high
+1.14,88,Female,Black / African American,46.3,G3a Mild–moderate
+0.96,54,Female,Non-Black,70.7,G2 Mildly decreased
+1.01,35,Female,Non-Black,74.4,G2 Mildly decreased
+0.97,69,Female,Non-Black,63.3,G2 Mildly decreased
+0.99,33,Female,Non-Black,77.0,G2 Mildly decreased
+0.97,58,Female,Non-Black,67.8,G2 Mildly decreased
+0.79,19,Male,Black / African American,131.5,G1 Normal or high
+0.81,31,Female,Black / African American,99.6,G1 Normal or high
+1.35,58,Male,Black / African American,60.6,G2 Mildly decreased
+0.84,68,Female,Black / African American,75.9,G2 Mildly decreased
+1.11,58,Female,Non-Black,57.7,G3a Mild–moderate
+1.59,52,Female,Black / African American,38.8,G3b Moderate–severe
+1.26,49,Female,Non-Black,52.5,G3a Mild–moderate
+0.82,28,Female,Non-Black,100.0,G1 Normal or high
+1.32,42,Female,Non-Black,51.9,G3a Mild–moderate
+0.95,46,Female,Non-Black,74.6,G2 Mildly decreased
+1.33,74,Male,Black / African American,55.9,G3a Mild–moderate
+0.83,61,Female,Non-Black,80.6,G2 Mildly decreased
+1.07,23,Male,Non-Black,100.5,G1 Normal or high
+0.87,60,Female,Non-Black,76.1,G2 Mildly decreased
+1.43,48,Male,Black / African American,60.2,G2 Mildly decreased
+1.26,42,Male,Non-Black,73.3,G2 Mildly decreased
+1.28,66,Male,Non-Black,61.8,G2 Mildly decreased
+1.11,73,Female,Non-Black,52.2,G3a Mild–moderate
+1.54,71,Female,Black / African American,35.9,G3b Moderate–severe
+1.14,39,Female,Non-Black,63.0,G2 Mildly decreased
+0.85,49,Male,Non-Black,106.7,G1 Normal or high
+0.67,60,Male,Non-Black,107.1,G1 Normal or high
+1.64,72,Male,Non-Black,44.3,G3b Moderate–severe
+0.65,46,Female,Non-Black,109.8,G1 Normal or high
+1.17,51,Male,Non-Black,75.8,G2 Mildly decreased
+1.0,35,Male,Black / African American,101.1,G1 Normal or high
+0.56,33,Female,Non-Black,123.5,G1 Normal or high
+1.13,69,Female,Non-Black,52.7,G3a Mild–moderate
+1.77,79,Male,Black / African American,38.5,G3b Moderate–severe
+1.07,53,Male,Non-Black,82.7,G2 Mildly decreased
+0.68,73,Male,Non-Black,98.2,G1 Normal or high
+0.84,61,Female,Non-Black,79.0,G2 Mildly decreased
+1.33,43,Male,Non-Black,67.8,G2 Mildly decreased
+0.77,61,Female,Black / African American,87.8,G2 Mildly decreased
+1.07,82,Female,Non-Black,51.6,G3a Mild–moderate
+1.09,54,Female,Black / African American,60.5,G2 Mildly decreased
+1.54,83,Male,Non-Black,44.6,G3b Moderate–severe
+1.17,18,Male,Non-Black,92.8,G1 Normal or high
+0.77,69,Female,Non-Black,82.9,G2 Mildly decreased
+1.28,56,Female,Non-Black,49.2,G3a Mild–moderate
+1.18,49,Male,Non-Black,75.7,G2 Mildly decreased
+1.09,56,Female,Black / African American,59.6,G3a Mild–moderate
+0.9,19,Male,Non-Black,126.1,G1 Normal or high
+0.97,51,Female,Black / African American,70.8,G2 Mildly decreased
+0.77,61,Female,Non-Black,87.4,G2 Mildly decreased
+1.12,81,Female,Black / African American,49.2,G3a Mild–moderate
+1.63,45,Female,Black / African American,39.3,G3b Moderate–severe
+0.96,40,Male,Black / African American,102.7,G1 Normal or high
+0.71,45,Female,Black / African American,106.5,G1 Normal or high
+1.65,71,Female,Black / African American,33.0,G3b Moderate–severe
+1.2,60,Male,Non-Black,69.5,G2 Mildly decreased
+0.77,45,Female,Non-Black,96.3,G1 Normal or high
+1.26,64,Female,Non-Black,47.6,G3a Mild–moderate
+1.2,56,Male,Black / African American,70.9,G2 Mildly decreased
+2.05,72,Male,Non-Black,33.9,G3b Moderate–severe
+1.25,42,Female,Black / African American,55.1,G3a Mild–moderate
+1.09,49,Male,Non-Black,83.6,G2 Mildly decreased
+2.09,47,Male,Non-Black,38.5,G3b Moderate–severe
+0.74,28,Female,Non-Black,112.5,G1 Normal or high
+1.16,60,Female,Non-Black,54.2,G3a Mild–moderate
+1.35,59,Male,Non-Black,60.2,G2 Mildly decreased
+1.72,55,Male,Non-Black,46.2,G3a Mild–moderate
+1.37,50,Female,Non-Black,46.9,G3a Mild–moderate
+1.18,29,Male,Non-Black,86.0,G2 Mildly decreased
+1.01,47,Male,Non-Black,92.2,G1 Normal or high
+1.04,48,Female,Non-Black,66.6,G2 Mildly decreased
+0.89,40,Female,Black / African American,84.4,G2 Mildly decreased
+1.55,52,Female,Non-Black,40.1,G3b Moderate–severe
+1.31,62,Male,Non-Black,61.5,G2 Mildly decreased
+0.95,88,Female,Non-Black,57.4,G3a Mild–moderate
+1.31,58,Male,Non-Black,62.9,G2 Mildly decreased
+0.9,59,Male,Non-Black,98.5,G1 Normal or high
+0.97,53,Male,Non-Black,93.1,G1 Normal or high
+1.13,20,Female,Non-Black,71.1,G2 Mildly decreased
+1.05,54,Male,Non-Black,84.0,G2 Mildly decreased
+0.73,56,Female,Non-Black,96.5,G1 Normal or high
+1.72,90,Male,Black / African American,37.4,G3b Moderate–severe
+1.46,51,Female,Black / African American,43.4,G3b Moderate–severe
+1.15,60,Female,Non-Black,54.6,G3a Mild–moderate
+1.59,54,Male,Non-Black,51.1,G3a Mild–moderate
+0.73,33,Female,Non-Black,111.8,G1 Normal or high
+0.7,75,Female,Non-Black,89.5,G2 Mildly decreased
+2.09,68,Male,Black / African American,33.9,G3b Moderate–severe
+1.19,69,Male,Non-Black,66.3,G2 Mildly decreased
+1.12,38,Male,Non-Black,86.1,G2 Mildly decreased
+1.84,80,Male,Non-Black,36.6,G3b Moderate–severe
+1.17,29,Female,Black / African American,64.9,G2 Mildly decreased
+1.09,65,Female,Non-Black,56.2,G3a Mild–moderate
+1.8,90,Female,Non-Black,26.4,G4 Severe
+0.76,37,Female,Non-Black,103.7,G1 Normal or high
+1.53,44,Male,Non-Black,57.2,G3a Mild–moderate
+1.27,56,Male,Non-Black,66.6,G2 Mildly decreased
+0.98,45,Female,Non-Black,72.7,G2 Mildly decreased
+1.26,27,Female,Non-Black,59.9,G3a Mild–moderate
+1.42,56,Male,Non-Black,58.1,G3a Mild–moderate
+1.01,35,Female,Non-Black,74.2,G2 Mildly decreased
+1.66,63,Male,Non-Black,46.1,G3a Mild–moderate
+0.82,38,Female,Non-Black,94.4,G1 Normal or high
+1.08,82,Male,Non-Black,68.9,G2 Mildly decreased
+0.81,40,Female,Black / African American,94.2,G1 Normal or high
+0.75,49,Male,Non-Black,110.6,G1 Normal or high
+2.15,69,Male,Non-Black,32.5,G3b Moderate–severe
+0.89,32,Male,Non-Black,116.7,G1 Normal or high
+1.19,59,Male,Non-Black,70.4,G2 Mildly decreased
+1.37,78,Male,Black / African American,53.0,G3a Mild–moderate
+1.25,26,Male,Non-Black,81.4,G2 Mildly decreased
+1.35,58,Female,Black / African American,45.4,G3a Mild–moderate
+1.56,59,Male,Non-Black,50.9,G3a Mild–moderate
+1.11,69,Male,Non-Black,71.7,G2 Mildly decreased
+0.98,32,Female,Black / African American,78.3,G2 Mildly decreased
+1.42,31,Male,Black / African American,67.8,G2 Mildly decreased
+1.34,64,Male,Black / African American,59.4,G3a Mild–moderate
+2.11,60,Male,Black / African American,35.2,G3b Moderate–severe
+1.08,59,Female,Non-Black,59.0,G3a Mild–moderate
+1.34,61,Female,Black / African American,45.2,G3a Mild–moderate
+1.42,42,Male,Non-Black,63.1,G2 Mildly decreased
+1.89,59,Male,Black / African American,40.5,G3b Moderate–severe
+1.0,60,Female,Non-Black,64.2,G2 Mildly decreased
+0.98,42,Male,Black / African American,98.7,G1 Normal or high
+1.49,88,Male,Non-Black,45.0,G3a Mild–moderate
+0.82,63,Female,Non-Black,79.9,G2 Mildly decreased
+1.03,33,Male,Non-Black,98.0,G1 Normal or high
+1.31,66,Female,Black / African American,45.1,G3a Mild–moderate
+1.21,37,Female,Non-Black,58.9,G3a Mild–moderate
+0.99,69,Female,Non-Black,61.6,G2 Mildly decreased
+1.41,75,Male,Non-Black,52.0,G3a Mild–moderate
+1.38,40,Female,Non-Black,49.7,G3a Mild–moderate
+1.22,72,Female,Black / African American,47.3,G3a Mild–moderate
+1.85,62,Female,Non-Black,30.4,G3b Moderate–severe
+1.31,69,Female,Black / African American,44.1,G3b Moderate–severe
+0.87,89,Male,Non-Black,82.6,G2 Mildly decreased
+1.12,50,Female,Non-Black,59.7,G3a Mild–moderate
+1.16,41,Female,Black / African American,60.9,G2 Mildly decreased
+1.65,38,Male,Non-Black,54.2,G3a Mild–moderate
+1.06,40,Female,Non-Black,67.7,G2 Mildly decreased
+0.91,53,Female,Non-Black,75.7,G2 Mildly decreased
+0.82,61,Female,Black / African American,81.4,G2 Mildly decreased
+0.91,59,Female,Non-Black,72.8,G2 Mildly decreased
+0.92,69,Female,Black / African American,67.5,G2 Mildly decreased
+0.95,55,Female,Black / African American,71.0,G2 Mildly decreased
+1.19,81,Female,Non-Black,46.2,G3a Mild–moderate
+1.87,50,Male,Non-Black,43.3,G3b Moderate–severe
+1.16,90,Female,Non-Black,44.8,G3b Moderate–severe
+0.95,66,Male,Non-Black,88.5,G2 Mildly decreased
+1.34,39,Male,Non-Black,69.2,G2 Mildly decreased
+1.19,35,Female,Non-Black,60.9,G2 Mildly decreased
+1.09,63,Male,Non-Black,76.3,G2 Mildly decreased
+1.04,50,Female,Black / African American,65.1,G2 Mildly decreased
+1.44,67,Male,Black / African American,53.4,G3a Mild–moderate
+0.92,63,Female,Black / African American,70.0,G2 Mildly decreased
+1.1,53,Female,Non-Black,59.8,G3a Mild–moderate
+0.87,39,Female,Non-Black,86.8,G2 Mildly decreased
+1.29,27,Male,Non-Black,78.0,G2 Mildly decreased
+0.86,46,Female,Black / African American,84.9,G2 Mildly decreased
+1.16,70,Male,Non-Black,68.0,G2 Mildly decreased
+1.32,58,Female,Black / African American,46.7,G3a Mild–moderate
+1.07,32,Male,Non-Black,94.4,G1 Normal or high
+1.47,58,Female,Non-Black,41.2,G3b Moderate–severe
+1.28,61,Male,Black / African American,63.8,G2 Mildly decreased
+0.95,39,Female,Non-Black,78.3,G2 Mildly decreased
+1.39,57,Female,Black / African American,44.3,G3b Moderate–severe
+0.77,56,Female,Black / African American,90.4,G1 Normal or high
+0.57,34,Female,Non-Black,122.3,G1 Normal or high
+0.86,61,Male,Non-Black,98.4,G1 Normal or high
+1.34,65,Female,Non-Black,44.1,G3b Moderate–severe
+1.26,74,Male,Black / African American,59.6,G3a Mild–moderate
+1.89,73,Female,Non-Black,27.6,G4 Severe
+0.76,30,Female,Non-Black,108.8,G1 Normal or high
+0.94,38,Female,Non-Black,80.0,G2 Mildly decreased
+1.65,64,Female,Black / African American,34.5,G3b Moderate–severe
+2.1,64,Male,Non-Black,34.5,G3b Moderate–severe
+1.88,64,Female,Black / African American,29.5,G4 Severe
+1.62,90,Female,Black / African American,29.9,G4 Severe
+1.65,65,Male,Non-Black,45.9,G3a Mild–moderate
+1.51,75,Male,Non-Black,47.7,G3a Mild–moderate
+1.39,72,Female,Black / African American,40.2,G3b Moderate–severe
+0.85,66,Female,Non-Black,75.3,G2 Mildly decreased
+1.12,49,Male,Black / African American,80.3,G2 Mildly decreased
+0.98,68,Female,Non-Black,62.6,G2 Mildly decreased
+0.87,41,Female,Non-Black,86.3,G2 Mildly decreased
+0.96,50,Female,Black / African American,71.7,G2 Mildly decreased
+1.45,46,Male,Non-Black,60.2,G2 Mildly decreased
+1.58,56,Male,Non-Black,50.8,G3a Mild–moderate
+1.07,90,Female,Non-Black,49.2,G3a Mild–moderate
+1.22,21,Female,Non-Black,64.8,G2 Mildly decreased
+0.74,67,Female,Non-Black,89.0,G2 Mildly decreased
+1.1,25,Male,Non-Black,95.5,G1 Normal or high
+0.89,46,Female,Black / African American,80.6,G2 Mildly decreased
+0.63,74,Female,Non-Black,93.1,G1 Normal or high
+1.22,56,Male,Non-Black,69.4,G2 Mildly decreased
+0.86,35,Female,Non-Black,90.5,G1 Normal or high
+1.98,42,Male,Black / African American,42.5,G3b Moderate–severe
+1.15,67,Female,Non-Black,52.3,G3a Mild–moderate
+0.82,41,Female,Black / African American,92.8,G1 Normal or high
+1.52,58,Female,Non-Black,39.6,G3b Moderate–severe
+1.69,55,Male,Non-Black,47.4,G3a Mild–moderate
+1.4,43,Male,Non-Black,64.0,G2 Mildly decreased
+1.28,90,Male,Non-Black,53.4,G3a Mild–moderate
+0.77,66,Female,Non-Black,85.1,G2 Mildly decreased
+1.03,18,Male,Non-Black,107.6,G1 Normal or high
+1.45,58,Female,Black / African American,41.8,G3b Moderate–severe
+1.46,43,Female,Non-Black,45.7,G3a Mild–moderate
+1.9,70,Male,Non-Black,37.5,G3b Moderate–severe
+0.8,40,Female,Non-Black,96.0,G1 Normal or high
+0.82,52,Female,Black / African American,85.9,G2 Mildly decreased
+1.01,64,Female,Non-Black,62.4,G2 Mildly decreased
+0.64,70,Female,Non-Black,95.1,G1 Normal or high
+0.95,33,Female,Non-Black,80.8,G2 Mildly decreased
+1.32,48,Male,Black / African American,66.3,G2 Mildly decreased
+0.82,46,Female,Non-Black,89.7,G2 Mildly decreased
+0.81,43,Male,Non-Black,112.1,G1 Normal or high
+1.69,86,Male,Black / African American,39.0,G3b Moderate–severe
+0.98,62,Female,Black / African American,65.5,G2 Mildly decreased
+0.65,32,Female,Non-Black,119.7,G1 Normal or high
+0.56,71,Female,Black / African American,97.6,G1 Normal or high
+1.34,90,Male,Non-Black,50.3,G3a Mild–moderate
+1.56,73,Female,Non-Black,35.0,G3b Moderate–severe
+1.76,27,Male,Non-Black,53.7,G3a Mild–moderate
+0.82,46,Female,Non-Black,89.4,G2 Mildly decreased
+1.13,77,Male,Non-Black,67.1,G2 Mildly decreased
+1.19,42,Female,Black / African American,58.7,G3a Mild–moderate
+0.75,62,Female,Non-Black,89.6,G2 Mildly decreased
+1.38,68,Male,Non-Black,55.5,G3a Mild–moderate
+1.45,38,Male,Non-Black,63.5,G2 Mildly decreased
+1.48,53,Female,Black / African American,42.1,G3b Moderate–severe
+1.11,18,Male,Non-Black,99.1,G1 Normal or high
+0.84,36,Female,Non-Black,91.8,G1 Normal or high
+0.99,50,Male,Non-Black,93.1,G1 Normal or high
+0.96,32,Male,Non-Black,108.2,G1 Normal or high
+1.12,84,Female,Black / African American,48.6,G3a Mild–moderate
+1.11,29,Female,Black / African American,68.6,G2 Mildly decreased
+1.16,47,Female,Non-Black,58.7,G3a Mild–moderate
+0.9,57,Female,Black / African American,74.5,G2 Mildly decreased
+1.92,80,Male,Non-Black,34.8,G3b Moderate–severe
+0.95,29,Female,Black / African American,83.1,G2 Mildly decreased
+1.0,75,Female,Non-Black,58.8,G3a Mild–moderate
+1.03,55,Male,Non-Black,85.5,G2 Mildly decreased
+0.65,37,Male,Non-Black,124.5,G1 Normal or high
+1.21,63,Female,Non-Black,50.4,G3a Mild–moderate
+1.15,58,Female,Non-Black,55.4,G3a Mild–moderate
+0.85,44,Female,Non-Black,86.6,G2 Mildly decreased
+0.96,56,Female,Non-Black,69.1,G2 Mildly decreased
+1.56,48,Male,Black / African American,54.3,G3a Mild–moderate
+0.64,57,Female,Non-Black,102.9,G1 Normal or high
+1.12,66,Male,Non-Black,72.5,G2 Mildly decreased
+1.44,83,Female,Black / African American,36.1,G3b Moderate–severe
+0.86,32,Male,Non-Black,118.0,G1 Normal or high
+1.45,90,Male,Non-Black,45.7,G3a Mild–moderate
+0.81,19,Male,Non-Black,130.3,G1 Normal or high
+1.22,52,Female,Black / African American,53.4,G3a Mild–moderate
+0.97,65,Female,Non-Black,65.1,G2 Mildly decreased
+0.64,60,Female,Non-Black,101.1,G1 Normal or high
+1.82,43,Male,Black / African American,46.7,G3a Mild–moderate
+1.15,51,Male,Black / African American,77.0,G2 Mildly decreased
+0.99,46,Male,Non-Black,94.6,G1 Normal or high
+1.27,44,Male,Non-Black,71.2,G2 Mildly decreased
+1.72,70,Male,Non-Black,42.3,G3b Moderate–severe
+0.86,61,Female,Black / African American,76.5,G2 Mildly decreased
+1.22,42,Male,Non-Black,75.6,G2 Mildly decreased
+1.11,71,Female,Non-Black,53.4,G3a Mild–moderate
+1.32,60,Female,Black / African American,46.2,G3a Mild–moderate
+1.03,69,Female,Non-Black,58.8,G3a Mild–moderate
+0.89,66,Female,Non-Black,71.2,G2 Mildly decreased
+0.73,40,Female,Non-Black,106.2,G1 Normal or high
+1.24,44,Male,Non-Black,73.6,G2 Mildly decreased
+0.75,68,Female,Non-Black,86.3,G2 Mildly decreased
+0.61,65,Male,Non-Black,106.4,G1 Normal or high
+1.05,54,Female,Non-Black,63.1,G2 Mildly decreased
+1.19,57,Female,Non-Black,53.2,G3a Mild–moderate
+0.64,77,Female,Black / African American,90.9,G1 Normal or high
+0.71,44,Female,Non-Black,107.7,G1 Normal or high
+1.66,64,Male,Black / African American,45.7,G3a Mild–moderate
+1.56,51,Female,Non-Black,40.0,G3b Moderate–severe
+1.39,51,Male,Black / African American,61.4,G2 Mildly decreased
+0.96,74,Female,Black / African American,62.1,G2 Mildly decreased
+1.23,69,Male,Non-Black,63.6,G2 Mildly decreased
+2.03,69,Male,Black / African American,34.9,G3b Moderate–severe
+1.25,78,Male,Black / African American,59.2,G3a Mild–moderate
+0.77,55,Female,Non-Black,90.5,G1 Normal or high
+0.87,67,Female,Non-Black,73.0,G2 Mildly decreased
+0.73,49,Female,Non-Black,100.7,G1 Normal or high
+1.45,60,Male,Black / African American,55.0,G3a Mild–moderate
+1.63,52,Female,Black / African American,37.7,G3b Moderate–severe
+1.19,56,Female,Black / African American,53.6,G3a Mild–moderate
+1.2,65,Male,Non-Black,67.3,G2 Mildly decreased
+0.98,40,Female,Black / African American,75.2,G2 Mildly decreased
+0.91,90,Male,Non-Black,79.7,G2 Mildly decreased
+1.11,36,Female,Non-Black,66.3,G2 Mildly decreased
+0.86,33,Female,Non-Black,91.2,G1 Normal or high
+1.25,75,Male,Non-Black,60.2,G2 Mildly decreased
+2.19,69,Female,Non-Black,23.8,G4 Severe
+1.38,66,Male,Non-Black,56.5,G3a Mild–moderate
+0.81,66,Female,Non-Black,80.0,G2 Mildly decreased
+0.85,54,Female,Non-Black,81.7,G2 Mildly decreased
+1.59,38,Male,Non-Black,56.6,G3a Mild–moderate
+1.28,56,Male,Non-Black,65.4,G2 Mildly decreased
+0.84,42,Male,Non-Black,111.6,G1 Normal or high
+1.25,72,Female,Non-Black,45.6,G3a Mild–moderate
+1.05,52,Male,Non-Black,85.8,G2 Mildly decreased
+1.44,40,Female,Non-Black,47.2,G3a Mild–moderate
+1.21,49,Female,Non-Black,54.7,G3a Mild–moderate
+1.13,62,Male,Non-Black,73.3,G2 Mildly decreased
+1.26,44,Female,Non-Black,54.2,G3a Mild–moderate
+1.22,40,Male,Non-Black,76.8,G2 Mildly decreased
+1.37,59,Female,Black / African American,44.5,G3b Moderate–severe
+1.08,59,Female,Non-Black,59.2,G3a Mild–moderate
+0.74,45,Female,Non-Black,101.5,G1 Normal or high
+1.04,46,Male,Non-Black,90.0,G1 Normal or high
+1.63,59,Male,Non-Black,48.4,G3a Mild–moderate
+1.07,28,Male,Non-Black,96.9,G1 Normal or high
+1.05,29,Male,Non-Black,98.0,G1 Normal or high
+0.95,42,Male,Non-Black,102.5,G1 Normal or high
+1.37,51,Male,Non-Black,62.4,G2 Mildly decreased
+1.61,60,Female,Non-Black,36.5,G3b Moderate–severe
+0.9,81,Female,Black / African American,64.4,G2 Mildly decreased
+1.15,70,Female,Black / African American,51.4,G3a Mild–moderate
+1.97,52,Male,Black / African American,40.1,G3b Moderate–severe
+1.36,54,Male,Black / African American,61.6,G2 Mildly decreased
+0.99,36,Female,Non-Black,75.4,G2 Mildly decreased
+0.95,54,Male,Non-Black,94.8,G1 Normal or high
+1.37,49,Male,Non-Black,63.5,G2 Mildly decreased
+0.92,60,Female,Non-Black,71.6,G2 Mildly decreased
+1.73,40,Male,Black / African American,50.6,G3a Mild–moderate
+1.71,64,Male,Non-Black,44.1,G3b Moderate–severe
+2.25,82,Female,Black / African American,21.3,G4 Severe
+1.43,53,Male,Non-Black,58.5,G3a Mild–moderate
+1.21,62,Female,Black / African American,50.6,G3a Mild–moderate
+1.34,67,Male,Non-Black,57.8,G3a Mild–moderate
+1.12,47,Male,Non-Black,81.7,G2 Mildly decreased
+1.37,59,Male,Non-Black,59.5,G3a Mild–moderate
+0.88,55,Female,Non-Black,77.8,G2 Mildly decreased
+1.3,56,Male,Non-Black,64.4,G2 Mildly decreased
+1.67,41,Male,Non-Black,52.3,G3a Mild–moderate
+0.85,55,Female,Black / African American,80.7,G2 Mildly decreased
+1.69,63,Male,Non-Black,45.1,G3a Mild–moderate
+1.42,81,Female,Non-Black,37.1,G3b Moderate–severe
+1.26,72,Male,Non-Black,60.7,G2 Mildly decreased
+0.71,90,Female,Black / African American,81.3,G2 Mildly decreased
+0.78,41,Female,Non-Black,98.4,G1 Normal or high
+1.37,70,Female,Non-Black,41.6,G3b Moderate–severe
+1.25,58,Male,Non-Black,66.9,G2 Mildly decreased
+0.82,90,Female,Non-Black,68.1,G2 Mildly decreased
+1.06,40,Male,Non-Black,91.2,G1 Normal or high
+1.11,39,Female,Non-Black,65.1,G2 Mildly decreased
+1.05,44,Female,Non-Black,67.5,G2 Mildly decreased
+0.93,18,Female,Black / African American,91.7,G1 Normal or high
+1.11,45,Male,Non-Black,83.6,G2 Mildly decreased
+0.82,41,Female,Non-Black,92.3,G1 Normal or high
+0.99,57,Male,Non-Black,88.5,G2 Mildly decreased
+2.12,61,Male,Black / African American,34.8,G3b Moderate–severe
+1.24,88,Male,Non-Black,55.9,G3a Mild–moderate
+1.55,72,Female,Black / African American,35.3,G3b Moderate–severe
+1.33,44,Female,Non-Black,50.4,G3a Mild–moderate
+1.53,38,Male,Non-Black,59.2,G3a Mild–moderate
+0.87,63,Female,Non-Black,74.8,G2 Mildly decreased
+1.46,31,Male,Black / African American,65.3,G2 Mildly decreased
+1.03,87,Female,Non-Black,52.3,G3a Mild–moderate
+1.16,76,Male,Black / African American,65.1,G2 Mildly decreased
+1.48,46,Male,Black / African American,58.6,G3a Mild–moderate
+0.86,24,Male,Non-Black,124.1,G1 Normal or high
+1.37,79,Female,Non-Black,39.3,G3b Moderate–severe
+1.1,52,Male,Non-Black,80.7,G2 Mildly decreased
+1.06,77,Female,Non-Black,53.9,G3a Mild–moderate
+1.08,26,Female,Black / African American,72.5,G2 Mildly decreased
+1.28,44,Male,Black / African American,71.0,G2 Mildly decreased
+1.44,55,Male,Non-Black,57.3,G3a Mild–moderate
+1.11,55,Male,Non-Black,78.8,G2 Mildly decreased
+1.7,46,Male,Black / African American,49.7,G3a Mild–moderate
+0.7,66,Female,Non-Black,95.4,G1 Normal or high
+1.07,35,Female,Black / African American,69.6,G2 Mildly decreased
+2.01,52,Male,Non-Black,39.3,G3b Moderate–severe
+0.74,57,Female,Non-Black,94.2,G1 Normal or high
+0.82,64,Female,Non-Black,79.8,G2 Mildly decreased
+1.12,67,Female,Non-Black,54.2,G3a Mild–moderate
+0.92,34,Female,Non-Black,83.5,G2 Mildly decreased
+0.94,27,Female,Non-Black,85.3,G2 Mildly decreased
+1.14,77,Female,Non-Black,49.5,G3a Mild–moderate
+1.3,60,Female,Black / African American,47.0,G3a Mild–moderate
+1.39,41,Female,Black / African American,48.9,G3a Mild–moderate
+1.47,82,Male,Non-Black,47.4,G3a Mild–moderate
+0.9,57,Female,Non-Black,75.0,G2 Mildly decreased
+1.19,76,Female,Non-Black,47.3,G3a Mild–moderate
+2.01,56,Male,Non-Black,38.3,G3b Moderate–severe
+1.02,90,Female,Non-Black,52.5,G3a Mild–moderate
+1.05,86,Male,Non-Black,69.2,G2 Mildly decreased
+1.62,50,Male,Non-Black,51.3,G3a Mild–moderate
+0.97,72,Female,Non-Black,62.4,G2 Mildly decreased
+0.57,66,Female,Non-Black,100.2,G1 Normal or high
+1.63,79,Male,Non-Black,42.7,G3b Moderate–severe
+1.17,37,Male,Black / African American,82.1,G2 Mildly decreased
+0.96,67,Female,Non-Black,64.9,G2 Mildly decreased
+1.41,74,Male,Non-Black,52.1,G3a Mild–moderate
+0.89,23,Female,Non-Black,93.3,G1 Normal or high
+1.41,33,Male,Non-Black,67.6,G2 Mildly decreased
+0.88,18,Female,Black / African American,97.3,G1 Normal or high
+1.4,50,Male,Non-Black,61.3,G2 Mildly decreased
+1.34,67,Male,Black / African American,58.0,G3a Mild–moderate
+1.59,82,Male,Non-Black,42.9,G3b Moderate–severe
+1.11,56,Female,Non-Black,58.6,G3a Mild–moderate
+0.94,84,Female,Black / African American,60.2,G2 Mildly decreased
+1.14,30,Female,Non-Black,66.3,G2 Mildly decreased
+0.75,24,Female,Non-Black,114.8,G1 Normal or high
+1.15,54,Female,Non-Black,56.4,G3a Mild–moderate
+1.38,61,Male,Non-Black,58.0,G3a Mild–moderate
+1.73,54,Female,Black / African American,34.7,G3b Moderate–severe
+0.79,18,Female,Non-Black,111.3,G1 Normal or high
+1.14,53,Male,Non-Black,77.3,G2 Mildly decreased
+1.17,31,Male,Non-Black,85.7,G2 Mildly decreased
+1.19,67,Male,Non-Black,67.1,G2 Mildly decreased
+1.54,61,Male,Non-Black,50.9,G3a Mild–moderate
+0.6,38,Female,Non-Black,117.9,G1 Normal or high
+0.7,45,Female,Non-Black,108.0,G1 Normal or high
+1.02,35,Male,Black / African American,98.0,G1 Normal or high
+1.57,53,Male,Non-Black,52.3,G3a Mild–moderate
+1.53,72,Female,Non-Black,36.0,G3b Moderate–severe
+1.31,37,Male,Black / African American,72.1,G2 Mildly decreased
+0.93,64,Female,Non-Black,68.5,G2 Mildly decreased
+0.93,45,Female,Non-Black,77.1,G2 Mildly decreased
+1.2,40,Female,Non-Black,58.5,G3a Mild–moderate
+0.98,53,Male,Non-Black,91.9,G1 Normal or high
+1.26,36,Male,Non-Black,75.7,G2 Mildly decreased
+1.36,45,Female,Black / African American,49.0,G3a Mild–moderate
+1.34,33,Male,Non-Black,72.0,G2 Mildly decreased
+1.1,90,Female,Non-Black,47.7,G3a Mild–moderate
+1.41,55,Female,Black / African American,44.2,G3b Moderate–severe
+0.61,42,Male,Non-Black,122.8,G1 Normal or high
+1.49,58,Male,Non-Black,54.3,G3a Mild–moderate
+1.05,52,Male,Non-Black,85.5,G2 Mildly decreased
+0.88,51,Male,Black / African American,104.3,G1 Normal or high
+1.45,66,Male,Non-Black,53.0,G3a Mild–moderate
+1.81,68,Male,Non-Black,40.2,G3b Moderate–severe
+0.88,45,Female,Non-Black,82.1,G2 Mildly decreased
+1.16,44,Female,Non-Black,59.8,G3a Mild–moderate
+1.39,50,Female,Non-Black,46.2,G3a Mild–moderate
+1.16,18,Female,Non-Black,70.2,G2 Mildly decreased
+1.98,27,Male,Black / African American,46.7,G3a Mild–moderate
+1.22,79,Female,Non-Black,45.0,G3a Mild–moderate
+1.05,84,Female,Non-Black,52.3,G3a Mild–moderate
+0.72,50,Female,Black / African American,101.2,G1 Normal or high
+1.34,65,Male,Black / African American,58.8,G3a Mild–moderate
+0.78,60,Female,Non-Black,87.2,G2 Mildly decreased
+2.32,90,Male,Non-Black,26.0,G4 Severe
+0.96,75,Female,Non-Black,61.6,G2 Mildly decreased
+1.12,52,Female,Black / African American,59.2,G3a Mild–moderate
+1.54,37,Male,Black / African American,59.2,G3a Mild–moderate
+1.17,26,Male,Non-Black,88.1,G2 Mildly decreased
+1.69,58,Female,Black / African American,34.9,G3b Moderate–severe
+1.03,41,Male,Non-Black,93.6,G1 Normal or high
+1.23,29,Male,Non-Black,81.9,G2 Mildly decreased
+0.76,43,Female,Non-Black,100.4,G1 Normal or high
+0.96,35,Male,Black / African American,105.7,G1 Normal or high
+1.15,85,Male,Non-Black,62.7,G2 Mildly decreased
+1.43,70,Male,Black / African American,52.9,G3a Mild–moderate
+1.25,54,Male,Black / African American,68.4,G2 Mildly decreased
+1.24,81,Male,Black / African American,58.5,G3a Mild–moderate
+0.88,56,Male,Non-Black,101.0,G1 Normal or high
+1.17,39,Male,Non-Black,81.1,G2 Mildly decreased
+0.91,82,Male,Non-Black,84.1,G2 Mildly decreased
+1.54,64,Male,Non-Black,50.1,G3a Mild–moderate
+1.21,36,Male,Non-Black,79.4,G2 Mildly decreased
+0.96,51,Male,Black / African American,95.6,G1 Normal or high
+0.83,39,Female,Non-Black,91.9,G1 Normal or high
+0.97,30,Male,Non-Black,107.8,G1 Normal or high

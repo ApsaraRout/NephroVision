@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global */
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    background-color: #f0f9ff;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  }
+}
+
+/* optional text shadows and subtle glass helper */
+@layer utilities {
+  .drop-shadow-2xl {
+    filter: drop-shadow(0 20px 25px rgba(2,6,23,0.25));
+  }
+}

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>eGFR Calculator - Kidney Health Check</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Chart.js datalabels plugin for percentage labels -->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    min-height:100vh;
+    font-family:'Inter',system-ui,sans-serif;
+    color:#e5e7ff;
+    background: 
+        radial-gradient(800px 800px at 10% 15%, rgba(99,102,241,0.18), transparent 60%),
+        radial-gradient(900px 900px at 85% 80%, rgba(168,85,247,0.16), transparent 60%),
+        radial-gradient(600px 600px at 50% 40%, rgba(34,211,238,0.14), transparent 60%),
+        linear-gradient(135deg, #020617 0%, #0f172a 50%, #020617 100%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* Floating orbs */
+body::before, body::after, body > .orb3 {
+    content:''; position:fixed; border-radius:50%; filter:blur(120px); opacity:0.5; z-index:-1; pointer-events:none;
+}
+body::before  { width:620px; height:620px; background:#6366f1; top:-220px; left:-220px; animation:orbFloat1 28s ease-in-out infinite; }
+body::after   { width:680px; height:680px; background:#22d3ee; bottom:-240px; right:-240px; animation:orbFloat2 34s ease-in-out infinite reverse; }
+.orb3         { width:520px; height:520px; background:#a78bfa; top:40%; left:50%; transform:translate(-50%,-50%); animation:orbFloat3 40s ease-in-out infinite; }
+
+@keyframes orbFloat1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(180px,140px)} }
+@keyframes orbFloat2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-160px,-120px)} }
+@keyframes orbFloat3 { 0%,100%{transform:translate(-50%,-50%) rotate(0deg)} 50%{transform:translate(-50%,-50%) rotate(12deg)} }
+
+/* Layout */
+.container {
+    display:grid;
+    grid-template-columns:1fr minmax(720px,820px) 1fr;
+    gap:40px;
+    padding:40px 20px;
+    max-width:1600px;
+    margin:0 auto;
+}
+
+.main-content { grid-column:2; }
+
+.side-left, .side-right { 
+    display:flex; 
+    flex-direction:column; 
+    gap:40px; 
+}
+
+/* Premium Animated Kidney Section */
+.kidney-anim-wrapper {
+    margin-top: 60px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(15,23,42,0.45);
+    border-radius: 20px;
+    border: 1px solid rgba(99,102,241,0.3);
+    box-shadow: 0 10px 30px rgba(99,102,241,0.3);
+}
+
+.kidney-anim-wrapper h4 {
+    color: #a78bfa;
+    font-size: 1.35rem;
+    margin-bottom: 18px;
+    text-shadow: 0 0 10px rgba(167,139,250,0.5);
+}
+
+.kidney-anim-wrapper img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 15px 50px rgba(99,102,241,0.6);
+    opacity: 0.95;
+    transition: all 0.4s ease;
+}
+
+.kidney-anim-wrapper img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Header */
+header { text-align:center; margin-bottom:50px; }
+
+h1 {
+    font-size:3.2rem;
+    font-weight:800;
+    background:linear-gradient(90deg, #a5b4fc, #c084fc, #67e8f9, #a78bfa);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-size:200%;
+    animation:titleShine 8s ease-in-out infinite;
+}
+
+@keyframes titleShine { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+
+.subtitle { margin-top:12px; font-size:1.2rem; color:#94a3b8; font-weight:400; }
+
+/* Side panels */
+aside {
+    background:rgba(15,23,42,0.45);
+    backdrop-filter:blur(12px);
+    border-radius:24px;
+    padding:28px;
+    border:1px solid rgba(255,255,255,0.08);
+    box-shadow:0 20px 60px rgba(0,0,0,0.6);
+    height:fit-content;
+    position:sticky;
+    top:40px;
+}
+
+aside h3 {
+    color:#c084fc;
+    font-size:1.4rem;
+    margin-bottom:18px;
+    position:relative;
+    padding-bottom:10px;
+}
+aside h3::after {
+    content:'';
+    position:absolute;
+    bottom:0; left:0;
+    width:60px;
+    height:3px;
+    background:linear-gradient(90deg, #c084fc, #22d3ee);
+    border-radius:3px;
+}
+
+aside ul { list-style:none; }
+aside li {
+    margin:14px 0;
+    color:#cbd5f5;
+    font-size:0.98rem;
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+}
+aside li::before { content:"→"; color:#818cf8; font-weight:bold; }
+
+/* Enhanced Chart Container */
+.chart-container { 
+    width:100%; 
+    max-width:320px; 
+    margin:0 auto; 
+    position: relative;
+    background: rgba(30,41,59,0.5);
+    border-radius: 16px;
+    padding: 20px 15px;
+    box-shadow: 0 8px 30px rgba(99,102,241,0.3);
+}
+
+/* Calculator */
+.calculator {
+    background:linear-gradient(180deg, rgba(30,41,59,0.65), rgba(15,23,42,0.45));
+    backdrop-filter:blur(22px);
+    border-radius:28px;
+    padding:48px 40px;
+    border:1px solid rgba(255,255,255,0.11);
+    box-shadow: 
+        inset 0 2px 4px rgba(255,255,255,0.12),
+        inset 0 -12px 24px rgba(0,0,0,0.6),
+        0 60px 100px rgba(0,0,0,0.75);
+    animation:cardFloat 7s ease-in-out infinite;
+}
+
+@keyframes cardFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+
+.form-group { margin-bottom:28px; }
+label { display:block; margin-bottom:10px; color:#c7d2fe; font-weight:500; font-size:1.05rem; }
+
+input, select {
+    width:100%;
+    padding:16px 20px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.16);
+    background:rgba(15,23,42,0.8);
+    color:#f8fafc;
+    font-size:1.1rem;
+    transition:all 0.3s ease;
+}
+input:focus, select:focus {
+    outline:none;
+    border-color:#818cf8;
+    box-shadow:0 0 0 5px rgba(129,140,248,0.25);
+    background:rgba(30,41,59,0.9);
+    transform:translateY(-1px);
+}
+
+button {
+    width:100%;
+    padding:20px;
+    font-size:1.2rem;
+    font-weight:700;
+    border:none;
+    border-radius:16px;
+    color:white;
+    cursor:pointer;
+    background:linear-gradient(90deg, #6366f1, #8b5cf6, #22d3ee, #a78bfa);
+    background-size:300% 300%;
+    animation:btnFlow 5s ease infinite;
+    box-shadow:0 12px 40px rgba(99,102,241,0.5);
+    transition:all 0.3s ease;
+}
+button:hover { transform:translateY(-3px); box-shadow:0 20px 60px rgba(99,102,241,0.7); }
+@keyframes btnFlow { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+/* Result */
+#result {
+    margin-top:40px;
+    padding:32px;
+    border-radius:20px;
+    background:rgba(2,6,23,0.7);
+    border-left:6px solid #818cf8;
+    box-shadow:inset 0 1px 2px rgba(255,255,255,0.15);
+}
+
+.user-values { font-size:1rem; color:#a5b4fc; margin-bottom:16px; padding-bottom:12px; border-bottom:1px solid rgba(129,140,248,0.25); }
+.egfr-value { font-size:3.8rem; font-weight:800; color:#e0e7ff; text-shadow:0 0 30px rgba(129,140,248,0.6); line-height:1; }
+.egfr-unit { font-size:1.5rem; color:#a5b4fc; font-weight:500; }
+.stage { font-size:1.45rem; margin-top:12px; color:#c7d2fe; font-weight:600; }
+
+/* Estimation Note */
+.estimation-note {
+    margin: 32px 0;
+    padding: 20px;
+    background: rgba(99,102,241,0.12);
+    border-radius: 16px;
+    border: 1px solid rgba(129,140,248,0.3);
+    text-align: center;
+    font-size: 0.95rem;
+    color: #cbd5f5;
+    line-height: 1.6;
+}
+
+/* Diagram Section */
+.diagram-section {
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(129,140,248,0.25);
+}
+
+.diagram-section h3 {
+    text-align:center;
+    color:#c084fc;
+    font-size:1.6rem;
+    margin-bottom:30px;
+}
+
+.diagram-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.diagram-item {
+    background:rgba(15,23,42,0.5);
+    border-radius:16px;
+    padding:20px;
+    border:1px solid rgba(129,140,248,0.2);
+    text-align:center;
+}
+
+.diagram-item img {
+    width:100%;
+    max-height:380px;
+    object-fit:contain;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.diagram-item p {
+    margin-top:14px;
+    color:#cbd5f5;
+    font-size:0.98rem;
+}
+
+/* Chart Info Text */
+.chart-info {
+    margin-top: 20px;
+    font-size: 0.92rem;
+    color: #a5b4fc;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* Responsive */
+@media (max-width:1100px) {
+    .container { grid-template-columns:1fr minmax(600px,780px) 1fr; gap:30px; }
+}
+
+@media (max-width:900px) {
+    .container { grid-template-columns:1fr; gap:50px; }
+    aside { position:static; }
+    .side-left, .side-right { gap:30px; }
+    .diagram-grid { grid-template-columns:1fr; }
+    .kidney-anim-wrapper img { max-width: 240px; }
+    .chart-container { max-width: 280px; }
+}
+</style>
+</head>
+<body>
+
+<div class="orb3"></div>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="side-left">
+        <aside>
+            <h3>Why Check eGFR?</h3>
+            <ul>
+                <li>Early kidney damage has <strong>no symptoms</strong></li>
+                <li>Protects from heart disease & stroke</li>
+                <li>Very important if you have:<br>• Diabetes<br>• High blood pressure<br>• Family history of kidney disease</li>
+                <li>Recommended for everyone above 50–55 years</li>
+                <li>Simple blood test → powerful insight</li>
+            </ul>
+        </aside>
+
+        <aside>
+            <h3>Rising Global Burden of CKD</h3>
+            <ul>
+                <li>Prevalent cases nearly doubled: 351M (1990) → 674M</li>
+                <li>Deaths increasing significantly worldwide</li>
+                <li>Main drivers: diabetes, hypertension, obesity</li>
+                <li>Projections: CKD deaths may double by 2040</li>
+            </ul>
+            <p style="margin-top:20px; font-size:0.92rem; color:#94a3b8;">Source: Global Burden of Disease Study</p>
+        </aside>
+
+        <!-- Hologram/X-ray Style - Futuristic Vibe -->
+        <div class="kidney-anim-wrapper">
+            <h4>Hologram X-Ray</h4>
+            <img 
+                src="https://elements-resized.envatousercontent.com/elements-video-cover-images/files/890b5233-efe6-49f8-abdd-96c0a4344ad7/inline_image_preview.jpg?w=500&cf_fit=cover&q=85&format=auto&s=6ba61ce6270163b0994855c3013ef66d425520bf3538212aa6cd6c63971a8fc7" 
+                alt="Futuristic hologram X-ray 3D rotating human kidneys neon blue"
+            >
+            <p style="margin-top:16px; font-size:0.9rem; color:#94a3b8;"> holographic X-ray</p>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <header>
+            <h1>eGFR Calculator</h1>
+            <div class="subtitle">Estimate your kidney function (CKD-EPI Creatinine Equation)</div>
+        </header>
+
+        <div class="calculator">
+            <div class="form-group">
+                <label>Serum Creatinine (mg/dL)</label>
+                <input type="number" id="creatinine" step="0.01" min="0.1" placeholder="e.g. 0.9">
+            </div>
+
+            <div class="form-group">
+                <label>Age (years)</label>
+                <input type="number" id="age" min="18" max="120" placeholder="e.g. 42">
+            </div>
+
+            <div class="form-group">
+                <label>Sex at birth</label>
+                <select id="sex">
+                    <option value="">Please select</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Race (optional)</label>
+                <select id="race">
+                    <option value="non-black">Non-Black</option>
+                    <option value="black">Black / African American</option>
+                </select>
+            </div>
+
+            <button onclick="calculateEGFR()">Calculate eGFR</button>
+
+            <div id="result"></div>
+
+            <div class="estimation-note">
+                <strong>Important:</strong> This is an estimation only 
+                 • Always consult your doctor for proper interpretation and next steps
+            </div>
+
+            <div class="diagram-section">
+                <h3>Understanding Kidney Structure</h3>
+                <div class="diagram-grid">
+                    <div class="diagram-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Blausen_0592_KidneyAnatomy_01.png" alt="Labeled cross-section of human kidney">
+                        <p>Cross-section of the Kidney</p>
+                    </div>
+                    <div class="diagram-item">
+                        <img src="https://ib.bioninja.com.au/_Media/nephron2_med.jpeg" alt="Labeled nephron structure">
+                        <p>The Nephron – the microscopic filtering unit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="side-right">
+        <aside>
+            <h3>eGFR Stages (KDIGO)</h3>
+            <ul>
+                <li><strong>≥ 90</strong> → G1 Normal or high</li>
+                <li><strong>60–89</strong> → G2 Mildly decreased</li>
+                <li><strong>45–59</strong> → G3a Mild–moderate</li>
+                <li><strong>30–44</strong> → G3b Moderate–severe</li>
+                <li><strong>15–29</strong> → G4 Severe</li>
+                <li><strong>< 15</strong> → G5 Kidney failure</li>
+            </ul>
+            <p style="margin-top:20px; font-size:0.95rem; color:#94a3b8;">
+                Lower eGFR + protein in urine = higher risk
+            </p>
+        </aside>
+
+        <aside>
+            <h3>Common Causes of CKD</h3>
+            <div class="chart-container">
+                <canvas id="ckdPieChart"></canvas>
+            </div>
+            <div class="chart-info">
+                Diabetes and hypertension together are responsible for approximately 75% of kidney failure cases worldwide.<br>
+                Diabetes remains the leading cause, contributing to 40–50% of chronic kidney disease.<br>
+                Controlling blood sugar and blood pressure early can significantly slow or prevent CKD progression.
+            </div>
+        </aside>
+
+        <!-- Visible Body Classic Rotating Urinary System GIF -->
+        <div class="kidney-anim-wrapper">
+            <h4> Urinary System</h4>
+            <img 
+                src="https://www.visiblebody.com/hs-fs/hubfs/urinary5.gif?width=515&height=1080&name=urinary5.gif" 
+                alt="Slow rotating 3D human urinary system kidneys Visible Body GIF transparent"
+            >
+            <p style="margin-top:16px; font-size:0.9rem; color:#94a3b8;"> Realistic anatomy with transparency</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+async function calculateEGFR() {
+
+    const creatinine = parseFloat(document.getElementById("creatinine").value);
+    const age = parseInt(document.getElementById("age").value);
+    const sex = document.getElementById("sex").value;
+    const race = document.getElementById("race").value;
+
+    const resultDiv = document.getElementById("result");
+
+    if (!creatinine || !age || !sex) {
+        resultDiv.innerHTML = '<span style="color:#fb7185; font-size:1.1rem;">Please fill all required fields</span>';
+        return;
+    }
+
+    resultDiv.innerHTML = "Calculating using AI model...";
+
+    try {
+
+        const response = await fetch("http://127.0.0.1:8000/api/calculate-egfr/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                age: age,
+                gender: sex,
+                serum_creatinine: creatinine,
+                race: race
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+
+            resultDiv.innerHTML = `
+                <div class="user-values">
+                    Creatinine: ${creatinine} mg/dL  |  Age: ${age}  |  ${sex}
+                </div>
+
+                <div class="egfr-value">${data.egfr_stage}</div>
+
+                <div class="stage">AI Model Prediction</div>
+
+                <div style="margin-top:10px;color:#94a3b8;">
+                    Accuracy: ${data.model_accuracy}
+                </div>
+            `;
+
+        } else {
+            resultDiv.innerHTML = `<span style="color:#fb7185;">Error: ${data.error}</span>`;
+        }
+
+    } catch (error) {
+        resultDiv.innerHTML = '<span style="color:#fb7185;">Server connection error</span>';
+    }
+}
+// Enhanced Pie Chart with labels & modern style
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('ckdPieChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Diabetes (46%)', 'Hypertension (29%)', 'Other Causes (25%)'],
+            datasets: [{
+                data: [46, 29, 25],
+                backgroundColor: [
+                    'rgba(239, 68, 68, 0.85)',      // red for diabetes
+                    'rgba(99, 102, 241, 0.85)',     // indigo for hypertension
+                    'rgba(34, 211, 238, 0.85)'      // cyan for others
+                ],
+                borderColor: [
+                    'rgba(239, 68, 68, 1)',
+                    'rgba(99, 102, 241, 1)',
+                    'rgba(34, 211, 238, 1)'
+                ],
+                borderWidth: 2,
+                hoverOffset: 20
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: '#e5e7ff',
+                        font: { size: 13, weight: 500 },
+                        padding: 15
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Leading Causes of Kidney Failure',
+                    color: '#c084fc',
+                    font: { size: 16, weight: 700 },
+                    padding: { top: 10, bottom: 20 }
+                },
+                subtitle: {
+                    display: true,
+                    text: 'Global Statistics (approx.)',
+                    color: '#94a3b8',
+                    font: { size: 12 },
+                    padding: { bottom: 10 }
+                },
+                datalabels: {
+                    color: '#ffffff',
+                    font: { weight: 'bold', size: 13 },
+                    formatter: (value) => value + '%'
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(15,23,42,0.95)',
+                    titleColor: '#e5e7ff',
+                    bodyColor: '#cbd5f5',
+                    titleFont: { size: 14 },
+                    bodyFont: { size: 13 }
+                }
+            },
+            animation: {
+                animateRotate: true,
+                animateScale: true
+            }
+        },
+        plugins: [ChartDataLabels]
+    });
+});
+</script>
+</body>
+</html>

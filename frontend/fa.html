@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Immersive Kidney Health Experience</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{
+  font-family:'Inter',sans-serif;
+  background:#05080d;
+  color:#e9faff;
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+}
+body{perspective:1px}
+
+/* ================= GLOBAL ================= */
+section{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10vw;
+  position:relative;
+}
+
+h1{
+  font-size:clamp(3rem,8vw,7rem);
+  font-weight:800;
+}
+h2{
+  font-size:clamp(2.2rem,5vw,4rem);
+  margin-bottom:30px;
+}
+p{
+  max-width:900px;
+  font-size:1.2rem;
+  opacity:.85;
+  line-height:1.8;
+}
+
+/* ================= HERO ================= */
+.hero{
+  background:radial-gradient(circle at center,#0a2c3a 0%,#02040a 70%);
+  text-align:center;
+  overflow:hidden;
+}
+.hero h1 span{color:#00e5ff}
+
+/* ===== HOLOGRAPHIC CURSOR-REVEAL KIDNEY ===== */
+.kidney-bg{
+  --x:50%;
+  --y:50%;
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(
+      260px at var(--x) var(--y),
+      rgba(0,229,255,.55),
+      rgba(0,229,255,.25) 40%,
+      rgba(0,0,0,0) 70%
+    ),
+    url("https://thumbs.dreamstime.com/b/vibrant-glowing-illustration-human-kidney-internal-fiery-orange-red-details-surrounded-abstract-blue-energy-407579405.jpg")
+    center/contain no-repeat;
+
+  opacity:0;
+  transform:translateZ(-1px) scale(2);
+  filter:
+    drop-shadow(0 0 30px rgba(0,229,255,.45))
+    contrast(1.2)
+    saturate(1.4);
+  pointer-events:none;
+  transition:opacity .35s ease;
+  z-index:-1;
+}
+
+/* ================= SCROLL INDICATOR ================= */
+.scroll-indicator{
+  position:absolute;
+  bottom:40px;
+  opacity:.6;
+  animation:float 2s infinite ease-in-out;
+}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(12px)}
+}
+
+/* ================= GLASS ================= */
+.glass{
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(30px);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:30px;
+  padding:60px;
+  box-shadow:0 40px 100px rgba(0,0,0,.6);
+}
+
+/* ================= ANALYZER ================= */
+input{
+  width:100%;
+  padding:20px;
+  font-size:1.1rem;
+  border-radius:14px;
+  border:none;
+  outline:none;
+  margin-bottom:20px;
+}
+
+button{
+  padding:18px 40px;
+  font-size:1.1rem;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#00e5ff,#00bcd4);
+  color:#002;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+button:hover{transform:scale(1.05)}
+
+#result{margin-top:30px;font-size:1.1rem}
+
+/* ================= SCROLL REVEAL ================= */
+.reveal{
+  opacity:0;
+  transform:translateY(80px);
+  transition:1.2s cubic-bezier(.19,1,.22,1);
+}
+.reveal.active{
+  opacity:1;
+  transform:none;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  padding:80px 10vw;
+  text-align:center;
+  opacity:.4;
+}
+</style>
+</head>
+
+<body>
+
+<div class="kidney-bg"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Inside Your <span>Kidneys</span></h1>
+    <p>An immersive experience explaining kidney-friendly nutrition.</p>
+  </div>
+  <div class="scroll-indicator">↓ Scroll</div>
+</section>
+
+<section>
+  <div class="glass reveal">
+    <h2>Why Kidney Health Matters</h2>
+    <p>Your kidneys filter waste and maintain balance.</p>
+  </div>
+</section>
+
+<section>
+  <div class="glass reveal">
+    <h2>Food & Kidney Impact</h2>
+    <p>Right nutrition protects kidney function.</p>
+  </div>
+</section>
+
+<section>
+  <div class="glass reveal">
+    <h2>Kidney Food Analyzer</h2>
+    <input id="foodInput" placeholder="e.g. apple, banana"/>
+    <button onclick="analyzeFood()">Analyze</button>
+    <div id="result"></div>
+  </div>
+</section>
+
+<section>
+  <div class="glass reveal">
+    <h2>Guidelines</h2>
+    <p>
+      ✔ Low sodium<br>
+      ✔ Controlled potassium<br>
+      ✔ Hydration<br>
+      ✔ Avoid processed food
+    </p>
+  </div>
+</section>
+
+<footer>Immersive Kidney Health Experience © 2026</footer>
+
+<script>
+/* Scroll reveal */
+document.querySelectorAll(".reveal").forEach(el=>{
+  window.addEventListener("scroll",()=>{
+    if(el.getBoundingClientRect().top<window.innerHeight-100){
+      el.classList.add("active");
+    }
+  });
+});
+
+/* Cursor-based reveal (works after scroll) */
+const kidney=document.querySelector(".kidney-bg");
+let hideTimer;
+
+window.addEventListener("mousemove",(e)=>{
+  const x=e.clientX/window.innerWidth*100;
+  const y=e.clientY/window.innerHeight*100;
+
+  kidney.style.setProperty("--x",x+"%");
+  kidney.style.setProperty("--y",y+"%");
+  kidney.style.opacity=1;
+
+  clearTimeout(hideTimer);
+  hideTimer=setTimeout(()=>kidney.style.opacity=0,500);
+});
+
+/* Food analyzer */
+function analyzeFood(){
+  const food=document.getElementById("foodInput").value.toLowerCase();
+  let msg="Moderate consumption advised.";
+  if(["apple","berries","egg"].some(f=>food.includes(f))) msg="✅ Kidney-friendly";
+  if(["banana","spinach"].some(f=>food.includes(f))) msg="⚠ High potassium";
+  if(["chips","fast"].some(f=>food.includes(f))) msg="❌ Avoid";
+  document.getElementById("result").innerText=msg;
+}
+</script>
+
+</body>
+</html>
