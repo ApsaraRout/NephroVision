@@ -86,6 +86,16 @@ python manage.py runserver
 - Mobile Application
 - Advanced AI Diagnostics
 
+## 📱 Screenshots
+
+![Home Screen](screenshots/Home.png)
+![Calculator](screenshots/Calculator.png)
+![Food Analyzer](screenshots/FoodAnalyzer.png)
+![Health Assistant](screenshots/HealthAssistant.png)
+![Registration](screenshots/Registration.png)
+![RenalGuard](screenshots/RenalGuard.png)
+![Risk Prediction](screenshots/RiskPrediction.png)
+![Water Recommender](screenshots/WaterRecommender.png)
 ---
 
 ## Author
